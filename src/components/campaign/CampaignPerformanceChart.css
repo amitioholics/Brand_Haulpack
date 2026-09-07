@@ -1,0 +1,107 @@
+.perf-chart {
+  background: var(--hp-bg-card);
+  border: 1px solid var(--hp-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.perf-chart__header {
+  padding: var(--space-5) var(--space-6);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  border-bottom: 1px solid var(--hp-border-light);
+}
+
+.perf-chart__title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+.perf-chart__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.perf-chart__metrics,
+.perf-chart__time-filters {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  background: var(--hp-bg);
+  border-radius: var(--radius-md);
+  padding: 2px;
+}
+
+.perf-chart__metric-btn,
+.perf-chart__time-btn {
+  padding: 5px 12px;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--hp-text-secondary);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.perf-chart__metric-btn:hover,
+.perf-chart__time-btn:hover {
+  color: var(--hp-text-primary);
+}
+
+.perf-chart__metric-btn--active,
+.perf-chart__time-btn--active {
+  background: var(--hp-white);
+  color: var(--hp-primary);
+  font-weight: 600;
+  box-shadow: var(--shadow-xs);
+}
+
+.perf-chart__body {
+  padding: var(--space-4) var(--space-4) var(--space-2);
+}
+
+.perf-chart__empty {
+  padding: var(--space-10);
+  text-align: center;
+  color: var(--hp-text-tertiary);
+  font-size: var(--text-base);
+}
+
+.perf-chart__tooltip {
+  background: var(--hp-text-primary);
+  color: var(--hp-white);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+}
+
+.perf-chart__tooltip-date {
+  font-size: var(--text-xs);
+  color: #9ca3af;
+  margin-bottom: 2px;
+}
+
+.perf-chart__tooltip-value {
+  font-weight: 600;
+  font-size: var(--text-base);
+}
+
+@media (max-width: 768px) {
+  .perf-chart__header {
+    flex-direction: column;
+  }
+  .perf-chart__controls {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .perf-chart__metrics,
+  .perf-chart__time-filters {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

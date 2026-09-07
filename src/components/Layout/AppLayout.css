@@ -1,0 +1,44 @@
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.app-layout__main {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  padding: var(--space-8);
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .app-layout__main {
+    margin-left: 0;
+    padding: var(--space-4);
+    padding-top: calc(var(--space-16) + var(--space-2));
+  }
+}
+
+/* HaulPack floating action widget */
+.haulpack-floating-action {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--hp-dark-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(52, 46, 86, 0.32);
+  cursor: pointer;
+  z-index: 95;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+}
+
+.haulpack-floating-action:hover {
+  transform: scale(1.08);
+  background: var(--hp-dark-purple-hover);
+  box-shadow: 0 8px 24px rgba(52, 46, 86, 0.42);
+}

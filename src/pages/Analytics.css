@@ -1,0 +1,493 @@
+/* ============================================
+   HaulPack Brand Analytics Suite Styling
+   ============================================ */
+
+.analytics {
+  padding-bottom: var(--space-8);
+}
+
+/* Header */
+.analytics__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-6);
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.analytics__header-left {
+  max-width: 680px;
+}
+
+.analytics__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--hp-primary-lighter);
+  color: var(--hp-primary);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-2);
+}
+
+.analytics__title {
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  color: var(--hp-text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: var(--space-2);
+}
+
+.analytics__subtitle {
+  font-size: var(--text-sm);
+  color: var(--hp-text-secondary);
+  line-height: 1.5;
+}
+
+.analytics__header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+/* Time Range Filter Pills */
+.analytics__time-filters {
+  display: flex;
+  background: var(--hp-bg-card);
+  border: 1px solid var(--hp-border);
+  border-radius: var(--radius-md);
+  padding: 3px;
+  gap: 2px;
+}
+
+.analytics__time-btn {
+  border: none;
+  background: none;
+  padding: 6px 12px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--hp-text-secondary);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.analytics__time-btn:hover {
+  color: var(--hp-primary);
+}
+
+.analytics__time-btn--active {
+  background: var(--hp-primary);
+  color: #ffffff !important;
+  box-shadow: 0 2px 6px rgba(101, 56, 234, 0.25);
+}
+
+/* 5 KPI Summary Cards */
+.analytics__kpis {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+/* Common Card */
+.analytics__card {
+  background: var(--hp-bg-card);
+  border: 1px solid var(--hp-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+  box-shadow: var(--shadow-sm);
+}
+
+.analytics__card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-5);
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.analytics__card-title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--hp-text-primary);
+  letter-spacing: -0.01em;
+  margin-bottom: 2px;
+}
+
+.analytics__card-subtitle {
+  font-size: var(--text-xs);
+  color: var(--hp-text-secondary);
+}
+
+/* Interactive Metric Tabs */
+.analytics__metric-tabs {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.analytics__metric-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--hp-border);
+  background: var(--hp-bg);
+  color: var(--hp-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.analytics__metric-tab:hover {
+  border-color: var(--hp-primary);
+  color: var(--hp-primary);
+}
+
+.analytics__metric-tab--active {
+  font-weight: 700;
+}
+
+/* Chart Container & Tooltip */
+.analytics__chart-container {
+  width: 100%;
+}
+
+.analytics__tooltip {
+  background: #ffffff;
+  border: 1px solid var(--hp-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.analytics__tooltip-title {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--hp-text-primary);
+  margin-bottom: var(--space-2);
+  border-bottom: 1px solid var(--hp-border-light);
+  padding-bottom: 4px;
+}
+
+.analytics__tooltip-row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  font-size: var(--text-xs);
+  margin-bottom: 3px;
+}
+
+.analytics__tooltip-label {
+  color: var(--hp-text-tertiary);
+}
+
+.analytics__tooltip-value {
+  font-weight: 700;
+  color: var(--hp-text-primary);
+}
+
+/* Economics Grid */
+.analytics__economics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.analytics__econ-box {
+  background: var(--hp-bg);
+  border: 1px solid var(--hp-border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+}
+
+.analytics__econ-label {
+  font-size: var(--text-xs);
+  color: var(--hp-text-tertiary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+
+.analytics__econ-val {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: var(--hp-text-primary);
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+.analytics__econ-sub {
+  font-size: 0.7rem;
+  color: var(--hp-text-secondary);
+}
+
+.analytics__econ-highlight {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  background: var(--hp-primary-lighter);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+}
+
+/* Platform Channel Deep Dive */
+.analytics__platform-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.analytics__platform-donut-col {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.analytics__donut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.analytics__donut-val {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: var(--hp-text-primary);
+}
+
+.analytics__donut-sub {
+  font-size: var(--text-xs);
+  color: var(--hp-text-tertiary);
+  font-weight: 500;
+}
+
+.analytics__platform-cards-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.analytics__plat-card {
+  background: var(--hp-bg);
+  border: 1px solid var(--hp-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.analytics__plat-card:hover {
+  border-color: var(--hp-primary);
+  transform: translateY(-2px);
+}
+
+.analytics__plat-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.analytics__plat-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.analytics__plat-name {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--hp-text-primary);
+}
+
+.analytics__plat-meta {
+  font-size: var(--text-xs);
+  color: var(--hp-text-secondary);
+}
+
+.analytics__plat-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  border-top: 1px solid var(--hp-border-light);
+  padding-top: var(--space-3);
+}
+
+.analytics__plat-stat-label {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--hp-text-tertiary);
+  margin-bottom: 2px;
+}
+
+.analytics__plat-stat-val {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--hp-text-primary);
+}
+
+.analytics__plat-stat-sub {
+  display: block;
+  font-size: 0.6875rem;
+  color: var(--hp-text-secondary);
+}
+
+/* Cross-Campaign Performance Matrix Table */
+.analytics__table-wrap {
+  overflow-x: auto;
+}
+
+.analytics__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.analytics__table th {
+  text-align: left;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--hp-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--hp-border);
+  background: var(--hp-bg);
+}
+
+.analytics__table td {
+  padding: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--hp-text-primary);
+  border-bottom: 1px solid var(--hp-border-light);
+  vertical-align: middle;
+}
+
+.analytics__table tr:hover td {
+  background: #faf9fd;
+}
+
+.analytics__table-camp-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.analytics__table-camp-name {
+  font-weight: 700;
+  color: var(--hp-text-primary);
+}
+
+.analytics__table-camp-tags {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.analytics__table-tag {
+  background: var(--hp-primary-lighter);
+  color: var(--hp-primary);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+}
+
+.analytics__table-date {
+  font-size: var(--text-xs);
+  color: var(--hp-text-tertiary);
+}
+
+.analytics__table-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--hp-primary);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--hp-primary);
+  transition: all var(--transition-fast);
+}
+
+.analytics__table-link:hover {
+  background: var(--hp-primary);
+  color: #ffffff;
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+  .analytics__kpis {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .analytics__dual-section {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics__platform-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics__platform-cards-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .analytics__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .analytics__kpis {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .analytics__economics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .analytics__kpis {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics__metric-tabs {
+    width: 100%;
+  }
+
+  .analytics__metric-tab {
+    flex: 1;
+    justify-content: center;
+  }
+}

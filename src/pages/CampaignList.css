@@ -1,0 +1,45 @@
+.campaign-list__header {
+  margin: var(--space-4) 0 var(--space-6);
+}
+
+.campaign-list__title {
+  font-size: var(--text-3xl);
+}
+
+.campaign-list__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.campaign-list__filters {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.campaign-list__view-btn {
+  padding: 4px 12px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--hp-primary);
+  border: 1px solid var(--hp-primary);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.campaign-list__view-btn:hover {
+  background: var(--hp-primary);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .campaign-list__toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
