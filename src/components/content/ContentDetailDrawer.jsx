@@ -51,19 +51,24 @@ export default function ContentDetailDrawer({ content, creatorName, onClose }) {
           </button>
         </div>
 
-        {/* 2-Column Body: Left Clean Vertical 9:16 Video Preview + Right Details */}
+        {/* 2-Column Body: Left Full-Height 9:16 Video Preview + Right Details */}
         <div className="reel-modal__body">
-          {/* Left Column: Ultra-Clean 9:16 Video Thumbnail */}
+          {/* Left Column: Full-Height 9:16 Video Preview Card */}
           <div className="reel-player">
             <div
               className="reel-player__screen"
-              style={{ background: content.thumbnailColor || 'linear-gradient(160deg, #6538ea 0%, #342e56 100%)' }}
+              onClick={handleViewContent}
+              style={{ background: content.thumbnailColor || 'linear-gradient(150deg, #6538ea 0%, #4926b8 50%, #1e1a38 100%)' }}
+              title="Click to view original video content"
             >
-              {/* Center Play Icon */}
-              <div className="reel-player__play-wrapper" onClick={handleViewContent}>
+              {/* Center Play Icon & Label */}
+              <div className="reel-player__play-wrapper">
                 <div className="reel-player__play-btn">
-                  <Play size={24} fill="white" color="white" style={{ marginLeft: 3 }} />
+                  <Play size={26} fill="white" color="white" style={{ marginLeft: 3 }} />
                 </div>
+                <span className="reel-player__play-label">
+                  Watch Reel ↗
+                </span>
               </div>
             </div>
           </div>

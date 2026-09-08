@@ -106,50 +106,67 @@
 
 .reel-modal__body {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 240px 1fr;
   gap: 24px;
   padding: 24px;
   overflow-y: auto;
-  align-items: start;
+  align-items: stretch;
 }
 
-/* 9:16 Smartphone Reel Player (Clean & Basic) */
+/* 9:16 Video Player (Full Height Utilization) */
 .reel-player {
   display: flex;
-  justify-content: center;
   width: 100%;
+  height: 100%;
 }
 
 .reel-player__screen {
-  width: 190px;
-  height: 330px;
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
   border-radius: 18px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 12px 28px rgba(101, 56, 234, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.2);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 14px;
+  padding: 20px;
   box-sizing: border-box;
   color: white;
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-/* Center Play Button */
+.reel-player__screen:hover {
+  box-shadow: 0 16px 36px rgba(101, 56, 234, 0.35), 0 0 0 2px rgba(101, 56, 234, 0.4);
+  transform: translateY(-2px);
+}
+
+.reel-player__screen:hover .reel-player__play-btn {
+  transform: scale(1.12);
+  background: var(--hp-primary);
+  border-color: white;
+}
+
+/* Center Play Button & Label */
 .reel-player__play-wrapper {
-  position: relative;
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
   z-index: 3;
 }
 
 .reel-player__play-btn {
-  width: 54px;
-  height: 54px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,10 +174,15 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
-.reel-player__play-wrapper:hover .reel-player__play-btn {
-  transform: scale(1.1);
-  background: rgba(101, 56, 234, 0.9);
-  border-color: white;
+.reel-player__play-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.03em;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 /* Right Details Section */
