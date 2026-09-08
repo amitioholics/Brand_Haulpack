@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { X, ExternalLink, LinkIcon, Play, Heart, Eye, MousePointer, Sparkles, Music2, Video, Film } from 'lucide-react';
+import { X, ExternalLink, LinkIcon, Play, Sparkles } from 'lucide-react';
 import { formatNumber, formatCurrency, formatPercent, formatDate } from '../../utils/formatters';
 import StatusBadge from '../common/StatusBadge';
 import './ContentDetailDrawer.css';
@@ -34,8 +34,6 @@ export default function ContentDetailDrawer({ content, creatorName, onClose }) {
       window.open(content.contentUrl, '_blank', 'noopener,noreferrer');
     }
   };
-
-  const isYoutube = content.platform === 'YouTube' || (content.contentType && content.contentType.includes('YouTube'));
 
   const modalUI = (
     <div className="content-modal-overlay" onClick={onClose}>

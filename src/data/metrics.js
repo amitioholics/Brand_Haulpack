@@ -131,26 +131,6 @@ export function getCreatorSalesAnalytics(campaignId, creatorId) {
   };
 }
 
-export function getCreatorRewardAnalytics(campaignId, creatorId) {
-  const content = getContentForCreator(campaignId, creatorId);
-  const totalReward = content.reduce((sum, c) => sum + c.reward, 0);
-
-  // Generate milestone breakdowns
-  const milestones = [
-    { name: 'Milestone 1', target: Math.round(totalReward * 0.2), status: 'Completed' },
-    { name: 'Milestone 2', target: Math.round(totalReward * 0.45), status: 'Completed' },
-    { name: 'Milestone 3', target: Math.round(totalReward * 0.75), status: 'Completed' },
-    { name: 'Milestone 4', target: totalReward, status: totalReward > 5000 ? 'Completed' : 'In Progress' },
-  ];
-
-  return {
-    totalReward,
-    rewardPaid: Math.round(totalReward * 0.75),
-    rewardPending: Math.round(totalReward * 0.25),
-    milestones,
-  };
-}
-
 /* ============================================
    Cross-Campaign Creator Analytics
    ============================================ */
@@ -207,24 +187,5 @@ export function getCreatorCampaignBreakdown(creatorId) {
       content,
     };
   });
-}
-
-export function getCreatorOverallTimeSeries(creatorId, metric = 'views') {
-  const content = getAllContentForCreator(creatorId);
-  if (!content.length) return [];
-
-  const byDate = {};
-  content.forEach(c => {
-    const d = c.publishedAt;
-    if (!byDate[d]) byDate[d] = { date: d, views: 0, clicks: 0, sales: 0 };
-    byDate[d].views += c.views;
-    byDate[d].clicks += c.clicks;
-    byDate[d].sales += c.sales;
-  });
-
-  return Object.values(byDate).sort((a, b) => a.date.localeCompare(b.date)).map(s => ({
-    date: s.date,
-    value: s[metric] || 0,
-  }));
 }
 

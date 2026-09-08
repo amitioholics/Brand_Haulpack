@@ -1,8 +1,8 @@
 import { useState, useMemo } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import {
-  FileVideo, Eye, MousePointerClick, ShoppingCart, Gift,
-  ExternalLink, LinkIcon, ArrowLeft, ArrowUpRight, TrendingUp, Layers, CheckCircle2
+  FileVideo, Eye, MousePointerClick, ShoppingCart,
+  ExternalLink, LinkIcon, ArrowLeft, ArrowUpRight, Layers
 } from 'lucide-react';
 import { getCreatorById } from '../data/creators';
 import { getCreatorOverallMetrics, getCreatorCampaignBreakdown } from '../data/metrics';

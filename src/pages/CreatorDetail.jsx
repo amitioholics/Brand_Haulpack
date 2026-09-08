@@ -4,8 +4,8 @@ import { FileVideo, Eye, MousePointerClick, ShoppingCart, ExternalLink, LinkIcon
 import { getCampaignById } from '../data/campaigns';
 import { getCreatorById, getCampaignCreatorRelation } from '../data/creators';
 import { getContentForCreator } from '../data/content';
-import { getCreatorCampaignMetrics, getCreatorTimeSeries, getCreatorSalesAnalytics } from '../data/metrics';
-import { formatNumber, formatCurrency, formatPercent, formatDate, getInitials } from '../utils/formatters';
+import { getCreatorCampaignMetrics, getCreatorSalesAnalytics } from '../data/metrics';
+import { formatNumber, formatCurrency, formatPercent, formatDate } from '../utils/formatters';
 import Breadcrumb from '../components/common/Breadcrumb';
 import KPICard from '../components/common/KPICard';
 import StatusBadge from '../components/common/StatusBadge';
