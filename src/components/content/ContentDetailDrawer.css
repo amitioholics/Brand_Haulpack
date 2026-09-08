@@ -113,7 +113,7 @@
   align-items: start;
 }
 
-/* 9:16 Smartphone Reel Player */
+/* 9:16 Smartphone Reel Player (Clean & Basic) */
 .reel-player {
   display: flex;
   justify-content: center;
@@ -121,12 +121,12 @@
 }
 
 .reel-player__screen {
-  width: 210px;
-  height: 370px;
-  border-radius: 20px;
+  width: 190px;
+  height: 330px;
+  border-radius: 18px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3), 0 0 0 2.5px rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -139,7 +139,7 @@
 .reel-player__top-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   z-index: 2;
 }
 
@@ -147,7 +147,7 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   padding: 4px 10px;
@@ -156,20 +156,10 @@
   font-weight: 600;
 }
 
-.reel-player__live-badge {
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  background: #ef4444;
-  color: white;
-  padding: 2px 6px;
-  border-radius: 4px;
-}
-
 /* Center Play Button */
 .reel-player__play-wrapper {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
@@ -177,119 +167,24 @@
 }
 
 .reel-player__play-btn {
-  width: 52px;
-  height: 52px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.2s ease, background 0.2s ease;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .reel-player__play-wrapper:hover .reel-player__play-btn {
-  transform: scale(1.12);
+  transform: scale(1.1);
   background: rgba(101, 56, 234, 0.9);
   border-color: white;
-}
-
-/* Right floating icons */
-.reel-player__sidebar-actions {
-  position: absolute;
-  right: 10px;
-  bottom: 80px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
-  z-index: 2;
-}
-
-.reel-player__action-icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  font-size: 10px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-}
-
-/* Bottom Reel caption info */
-.reel-player__bottom-info {
-  z-index: 2;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0) 100%);
-  margin: -14px;
-  padding: 24px 14px 14px 14px;
-}
-
-.reel-player__creator-row {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 6px;
-}
-
-.reel-player__avatar {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: var(--hp-primary);
-  font-size: 9px;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid white;
-}
-
-.reel-player__creator-name {
-  font-size: 11px;
-  font-weight: 700;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 95px;
-}
-
-.reel-player__follow-btn {
-  font-size: 9px;
-  font-weight: 700;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  padding: 1px 6px;
-  border-radius: 4px;
-  text-transform: uppercase;
-}
-
-.reel-player__caption-preview {
-  font-size: 11px;
-  line-height: 1.3;
-  margin-bottom: 6px;
-  color: rgba(255, 255, 255, 0.95);
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.reel-player__audio-row {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 10px;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.reel-player__audio-text {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 9px;
 }
 
 /* Right Details Section */

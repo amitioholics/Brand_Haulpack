@@ -51,59 +51,26 @@ export default function ContentDetailDrawer({ content, creatorName, onClose }) {
           </button>
         </div>
 
-        {/* 2-Column Body: Left 9:16 Vertical Reel Player + Right Details */}
+        {/* 2-Column Body: Left Clean Vertical 9:16 Video Preview + Right Details */}
         <div className="reel-modal__body">
-          {/* Left Column: 9:16 Smartphone Reel Preview Mockup */}
+          {/* Left Column: Clean 9:16 Video Thumbnail */}
           <div className="reel-player">
             <div
               className="reel-player__screen"
               style={{ background: content.thumbnailColor || 'linear-gradient(160deg, #6538ea 0%, #342e56 100%)' }}
             >
-              {/* Platform top tag */}
+              {/* Minimal Platform Tag */}
               <div className="reel-player__top-bar">
                 <span className="reel-player__platform-tag">
                   {isYoutube ? <Film size={12} color="#ef4444" /> : <Video size={12} color="#c084fc" />}
                   <span>{content.contentType || content.platform || 'Reel'}</span>
                 </span>
-                <span className="reel-player__live-badge">LIVE</span>
               </div>
 
               {/* Center Play Icon */}
               <div className="reel-player__play-wrapper" onClick={handleViewContent}>
                 <div className="reel-player__play-btn">
-                  <Play size={22} fill="white" color="white" style={{ marginLeft: 3 }} />
-                </div>
-              </div>
-
-              {/* Right overlay icons (Like, Views, Share) */}
-              <div className="reel-player__sidebar-actions">
-                <div className="reel-player__action-icon">
-                  <Heart size={16} fill="rgba(255,255,255,0.2)" color="white" />
-                  <span>{formatNumber(Math.round(content.views * 0.08))}</span>
-                </div>
-                <div className="reel-player__action-icon">
-                  <Eye size={16} color="white" />
-                  <span>{formatNumber(content.views)}</span>
-                </div>
-                <div className="reel-player__action-icon">
-                  <MousePointer size={16} color="white" />
-                  <span>{formatNumber(content.clicks)}</span>
-                </div>
-              </div>
-
-              {/* Bottom Reel Caption & Creator Info */}
-              <div className="reel-player__bottom-info">
-                <div className="reel-player__creator-row">
-                  <div className="reel-player__avatar">
-                    {creatorName ? creatorName.slice(0, 2).toUpperCase() : 'HP'}
-                  </div>
-                  <span className="reel-player__creator-name">@{creatorName ? creatorName.toLowerCase().replace(/\s+/g, '') : 'creator'}</span>
-                  <span className="reel-player__follow-btn">Follow</span>
-                </div>
-                <p className="reel-player__caption-preview">{content.title}</p>
-                <div className="reel-player__audio-row">
-                  <Music2 size={11} color="white" />
-                  <span className="reel-player__audio-text">Original Audio • Myntra Haul</span>
+                  <Play size={24} fill="white" color="white" style={{ marginLeft: 3 }} />
                 </div>
               </div>
             </div>
