@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { X, ExternalLink, LinkIcon, FileVideo } from 'lucide-react';
 import { formatNumber, formatCurrency, formatPercent, formatDate } from '../../utils/formatters';
 import StatusBadge from '../common/StatusBadge';
@@ -34,7 +35,7 @@ export default function ContentDetailDrawer({ content, creatorName, onClose }) {
     }
   };
 
-  return (
+  const modalUI = (
     <div className="content-modal-overlay" onClick={onClose}>
       <div className="content-modal" onClick={(e) => e.stopPropagation()}>
         {/* Header */}
@@ -52,7 +53,7 @@ export default function ContentDetailDrawer({ content, creatorName, onClose }) {
         <div className="content-modal__body">
           {/* Video / Post Preview Banner */}
           <div className="content-modal__thumbnail" style={{ background: content.thumbnailColor || 'linear-gradient(135deg, #6538ea 0%, #835ff3 100%)' }}>
-            <FileVideo size={36} style={{ color: 'white', opacity: 0.9 }} />
+            <FileVideo size={32} style={{ color: 'white', opacity: 0.9 }} />
             <div className="content-modal__play">▶</div>
           </div>
 
@@ -125,5 +126,8 @@ export default function ContentDetailDrawer({ content, creatorName, onClose }) {
       </div>
     </div>
   );
+
+  return createPortal(modalUI, document.body);
 }
+
 
