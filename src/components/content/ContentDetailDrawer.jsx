@@ -53,20 +53,12 @@ export default function ContentDetailDrawer({ content, creatorName, onClose }) {
 
         {/* 2-Column Body: Left Clean Vertical 9:16 Video Preview + Right Details */}
         <div className="reel-modal__body">
-          {/* Left Column: Clean 9:16 Video Thumbnail */}
+          {/* Left Column: Ultra-Clean 9:16 Video Thumbnail */}
           <div className="reel-player">
             <div
               className="reel-player__screen"
               style={{ background: content.thumbnailColor || 'linear-gradient(160deg, #6538ea 0%, #342e56 100%)' }}
             >
-              {/* Minimal Platform Tag */}
-              <div className="reel-player__top-bar">
-                <span className="reel-player__platform-tag">
-                  {isYoutube ? <Film size={12} color="#ef4444" /> : <Video size={12} color="#c084fc" />}
-                  <span>{content.contentType || content.platform || 'Reel'}</span>
-                </span>
-              </div>
-
               {/* Center Play Icon */}
               <div className="reel-player__play-wrapper" onClick={handleViewContent}>
                 <div className="reel-player__play-btn">
